@@ -1,0 +1,33 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjetWPF.Fenetres"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" 
+             x:Class="ProjetWPF.Fenetres.Accueil"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="900">
+    <Grid OpacityMask="Black" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="146*"/>
+            <RowDefinition Height="54*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="98*"/>
+            <ColumnDefinition Width="56*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Rousources/back.jpeg"/>
+        </Grid.Background>
+        <Image Source="../Rousources/Logo1.png" Grid.Row="1" Grid.Column="1"></Image>
+        <Viewbox Grid.Column="1" Grid.Row="2">
+            <Label  FontSize="60" Foreground="White" Content="Metéo Algerie" Grid.ColumnSpan="2" />
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="0">
+            <Label FontSize="80" Foreground="White" RenderTransformOrigin="0.644,0.552" Content="Bienvenue" />
+        </Viewbox>
+    </Grid>
+</UserControl>

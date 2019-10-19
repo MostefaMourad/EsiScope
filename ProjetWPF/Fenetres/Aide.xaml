@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="ProjetWPF.Fenetres.Aide"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjetWPF.Fenetres"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid x:Name="MyGrid">
+        <Label x:Name="ok" Margin="80,56.376,402.087,300.667" ></Label>
+
+
+        <!--Button Click="Button_Click" Margin="80,218.667,0,0">
+            <Grid Width="552.5" >
+                <Path x:Name="w1" Data="M482,122.66667 L505.72222,121.49966 505.278,137.72188 501.72241,151.94451 514.61143,152.83386 511.72263,162.83458 493.94461,169.05742 472.16653,166.83467 458.38813,150.61185 454.38792,133.05565 467.9437,119.94405 z" Fill="#FF8383B8" HorizontalAlignment="Left" Height="50.112" Margin="454.389,119.944,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="61.222" MouseEnter="Path_MouseEnter" MouseLeave="Path_MouseLeave"/>
+                <Path x:Name="w2" Data="M545.77778,121.11111 L541.72199,136.83345 524.612,149.50072 514.39048,152.83412 501.50221,151.05662 504.83538,137.94509 505.2798,121.05567 505.2798,100.16539 542.16664,93.275802 z" Fill="#FF8383B8" HorizontalAlignment="Left" Height="60.555" Margin="501.5,93.278,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="45.278" MouseEnter="Path_MouseEnter" MouseLeave="Path_MouseLeave"/>
+                <Path x:Name="w3" Data="M524.66667,150 L514.38858,152.38889 512.16619,160.83281 495.72078,169.05522 507.27691,186.83183 542.8336,177.94356 569.50167,136.61154 541.94502,136.38944 z" Fill="#FF8383B8" HorizontalAlignment="Left" Height="51.444" Margin="495.722,136.389,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="74.778" MouseEnter="Path_MouseEnter" MouseLeave="Path_MouseLeave"/>
+            </Grid-->
+        <Path x:Name="w1" ToolTip="Adrar" Data="M482,122.66667 L505.72222,121.49966 505.278,137.72188 501.72241,151.94451 514.61143,152.83386 511.72263,162.83458 493.94461,169.05742 472.16653,166.83467 458.38813,150.61185 454.38792,133.05565 467.9437,119.94405 z" Fill="#FF1592E6" HorizontalAlignment="Left" Height="50.112" Margin="454.389,119.944,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="61.222" MouseEnter="Path_MouseEnter" MouseLeave="Path_MouseLeave" MouseLeftButtonDown="W1_MouseLeftButtonDown" MouseMove="W1_MouseMove"/>
+        <Path x:Name="w2"  ToolTip="Afzf" Data="M545.77778,121.11111 L541.72199,136.83345 524.612,149.50072 514.39048,152.83412 501.50221,151.05662 504.83538,137.94509 505.2798,121.05567 505.2798,100.16539 542.16664,93.275802 z" Fill="#FF1592E6" HorizontalAlignment="Left" Height="60.555" Margin="501.5,93.278,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="45.278" MouseEnter="Path_MouseEnter" MouseLeave="Path_MouseLeave" MouseLeftButtonDown="W1_MouseLeftButtonDown"/>
+        <Path x:Name="w3"  ToolTip="ddd" Data="M524.66667,150 L514.38858,152.38889 512.16619,160.83281 495.72078,169.05522 507.27691,186.83183 542.8336,177.94356 569.50167,136.61154 541.94502,136.38944 z" Fill="#FF1592E6" HorizontalAlignment="Left" Height="51.444" Margin="495.722,136.389,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="74.778" MouseEnter="Path_MouseEnter" MouseLeave="Path_MouseLeave" MouseLeftButtonDown="W1_MouseLeftButtonDown" />
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,72 @@
+﻿<Application x:Class="ProjetWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:local="clr-namespace:ProjetWPF"
+             xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
+
+                <!-- accent resource -->
+                <!-- change "Cobalt" to the accent color you want -->
+
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cobalt.xaml" />
+
+                <!-- theme resource -->
+                <!-- change "BaseLight" to the theme you want -->
+
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="{x:Type controls:WindowButtonCommands}"
+                   BasedOn="{StaticResource MahApps.Metro.Styles.WindowButtonCommands.Win10}" />
+            <Style x:Key="BackGroundGrid" TargetType="{x:Type Grid}">
+                <Setter Property="Background" Value="{DynamicResource WhiteBrush}" />
+            </Style>
+            <Style x:Key="SimpleGrid" TargetType="{x:Type Grid}">
+                <Setter Property="Background" Value="{DynamicResource WhiteBrush}" />
+            </Style>
+            <Style x:Key="SimpleStack" TargetType="{x:Type StackPanel}">
+                <Setter Property="Background" Value="{DynamicResource WhiteBrush}" />
+            </Style>
+            <Style x:Key="SimpleWrap" TargetType="{x:Type WrapPanel}">
+                <Setter Property="Background" Value="{DynamicResource WhiteBrush}" />
+            </Style>
+            <Style x:Key="SimpleWrap2" TargetType="{x:Type WrapPanel}">
+                <Setter Property="Background" Value="{DynamicResource AccentColorBrush3}" />
+            </Style>
+            <Style x:Key="LabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="Foreground" Value="{DynamicResource AccentColorBrush}" />
+            </Style>
+            <Style x:Key="LabelStyle2" TargetType="{x:Type Label}">
+                <Setter Property="Foreground" Value="{DynamicResource AccentColorBrush2}" />
+            </Style>
+            <Style TargetType="{x:Type lvc:Gauge}">
+                <Setter Property="GaugeBackground" Value="{DynamicResource AccentColorBrush3}" />
+                <Setter Property="GaugeActiveFill" Value="{DynamicResource AccentColorBrush}"/>
+                <Setter Property="Foreground" Value="{DynamicResource BlackBrush}" />
+            </Style>
+            <Style x:Key="WrapSelection" TargetType="WrapPanel">
+                <Setter Property="WrapPanel.Background" Value="{DynamicResource WhiteBrush}"/>
+                <Style.Triggers>
+                    <Trigger Property="WrapPanel.IsMouseOver" Value="True">
+                        <Setter Property="WrapPanel.Background"  Value="{DynamicResource AccentColorBrush2}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="WrapBleu" TargetType="WrapPanel">
+                <Setter Property="WrapPanel.Background" Value="{DynamicResource AccentColorBrush}"/>
+            </Style>
+        </ResourceDictionary>
+        
+    </Application.Resources>
+</Application>

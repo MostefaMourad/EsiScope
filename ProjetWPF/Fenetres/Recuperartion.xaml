@@ -1,0 +1,124 @@
+﻿<Controls:MetroWindow x:Class="ProjetWPF.Fenetres.Recuperartion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:views="clr-namespace:ProjetWPF.Fenetres"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:ProjetWPF.Fenetres"
+        mc:Ignorable="d"
+        Title="Donnée du jour" Height="450" Width="600" ResizeMode="NoResize">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center"  TextWrapping="Wrap" Text="Données Du Jour" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="40" Width="191"  Foreground="#FF2680EB" FontSize="22" FontWeight="Bold"/>
+        <Controls:NumericUpDown  x:Name="TmpMin" Grid.Column="0" Grid.Row="1" Minimum = "-15" Maximum = "55" Margin="10,10,10.333,10"  MouseEnter="NumericUpDown_MouseEnter" MouseLeave="NumericUpDown_MouseLeave" BorderBrush="White"/>
+        <Controls:NumericUpDown  x:Name="TmpMax" Grid.Column="1" Grid.Row="1" Minimum = "-10" Maximum = "60" Margin="10,10,10.333,10"   MouseEnter="NumericUpDown_MouseEnter" MouseLeave="NumericUpDown_MouseLeave" BorderBrush="White" />
+        <Controls:NumericUpDown  x:Name="Pression"  Grid.Column="0" Grid.Row="2" Interval="0.1" Minimum = "700" Maximum = "800" Margin="10,10,10.333,10"  MouseEnter="NumericUpDown_MouseEnter" MouseLeave="NumericUpDown_MouseLeave" BorderBrush="White" />
+        <Controls:NumericUpDown  x:Name="Humidite"  Grid.Column="1" Grid.Row="2" Minimum = "0" Maximum = "100" Margin="10,10,10.333,10"  MouseEnter="NumericUpDown_MouseEnter" MouseLeave="NumericUpDown_MouseLeave" BorderBrush="White" />
+        <Controls:NumericUpDown  x:Name="Vent" Grid.Row="3" Minimum = "0" Maximum = "100" Margin="10,10,10.333,10"  MouseEnter="NumericUpDown_MouseEnter" MouseLeave="NumericUpDown_MouseLeave" BorderBrush="White"/>
+        <Controls:NumericUpDown  x:Name="Visibilite" Grid.Column="0" Grid.Row="4" Minimum = "0" Interval="0.1" Maximum = "100" Margin="10,10,10.333,10"  MouseEnter="NumericUpDown_MouseEnter" MouseLeave="NumericUpDown_MouseLeave" BorderBrush="White" />
+        <Controls:NumericUpDown  x:Name="Precipitation" Grid.Column="1" Grid.Row="4" Interval="0.1" Minimum = "0" Maximum = "200" Margin="10,10,10.333,10"  MouseEnter="NumericUpDown_MouseEnter" MouseLeave="NumericUpDown_MouseLeave" BorderBrush="White" />
+        <Controls:NumericUpDown  x:Name="Nebulosite"  Grid.Column="0" Grid.Row="5" Minimum = "0" Maximum = "100" Margin="10,10,10.333,10"  MouseEnter="NumericUpDown_MouseEnter" MouseLeave="NumericUpDown_MouseLeave" BorderBrush="White" />
+        <ComboBox Grid.Row="3" Grid.Column="1" Margin="10,9.667,10.333,10" BorderBrush="White">
+            <ComboBoxItem IsSelected="True" Content=""/>
+            <ComboBoxItem Content="Calme"/>
+            <ComboBoxItem  Content="Nord"/>
+            <ComboBoxItem Content="Nord-Nord_Est"/>
+            <ComboBoxItem Content="Nord_Est"/>
+            <ComboBoxItem Content="Est"/>
+            <ComboBoxItem Content="Est-Sud_Est"/>
+            <ComboBoxItem Content="Sud_Est"/>
+            <ComboBoxItem Content="Sud-Sud_Est"/>
+            <ComboBoxItem Content="Sud"/>
+            <ComboBoxItem Content="Sud-Sud_Ouest"/>
+            <ComboBoxItem Content="Sud_Ouest"/>
+            <ComboBoxItem Content="Ouest-Sud_Ouest"/>
+            <ComboBoxItem Content="Ouest"/>
+            <ComboBoxItem Content="Ouest-Nord_Ouest"/>
+            <ComboBoxItem Content="Nord_Ouest"/>
+        </ComboBox>
+        <ComboBox Grid.Row="5" Grid.Column="1" Margin="10,9.667,10.333,10" BorderBrush="White">
+
+            <ComboBoxItem IsSelected="True" Content=""/>
+            <ComboBoxItem Content="Oui"/>
+            <ComboBoxItem Content="Non"/>
+        </ComboBox>
+        <TextBlock x:Name="TmpMinLabel" HorizontalAlignment="Left" Margin="85,24,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="16" Foreground="#FF666666"><Run Text="Tempurature "/><Run Text="min"/></TextBlock>
+        <TextBlock x:Name="TmpMaxLabel" HorizontalAlignment="Left" Margin="84.667,24,0,0" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" FontSize="16" Foreground="#FF666666" Grid.RowSpan="2"><Run Text="Tempurature "/><Run Text="max"/></TextBlock>
+        <TextBlock x:Name="PressionLabel" HorizontalAlignment="Left" Margin="85,24,0,0" Grid.Row="2"  TextWrapping="Wrap" Text="Pression" VerticalAlignment="Top" Width="121" FontSize="16" Foreground="#FF666666"/>
+        <TextBlock x:Name="HumiditeLabel" HorizontalAlignment="Left" Margin="85,24,0,0" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="Humidité" VerticalAlignment="Top" Width="121" FontSize="16" Foreground="#FF666666"/>
+        <TextBlock x:Name="VentLabel" HorizontalAlignment="Left" Margin="85,24,0,0" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap" Text="Vitesse du vent" VerticalAlignment="Top" Width="121" Foreground="#FF666666" FontSize="16"/>
+        <TextBlock x:Name="VisibiliteLabel" HorizontalAlignment="Left" Margin="85,23.333,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Distance de visibilité" VerticalAlignment="Top" Width="146" Foreground="#FF666666" FontSize="16" Grid.RowSpan="2"/>
+        <TextBlock x:Name="PrecipitationLabel" HorizontalAlignment="Left" Margin="85,24,0,0" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" Text="Précipitation" VerticalAlignment="Top" Width="121" FontSize="16" Foreground="#FF666666"/>
+        <TextBlock x:Name="NebulositeLabel" HorizontalAlignment="Left" Margin="85,24,0,0" Grid.Row="5" Grid.Column="0" TextWrapping="Wrap" Text="Nebulosite" VerticalAlignment="Top" Width="121" Foreground="#FF666666" FontSize="16"/>
+
+        <Image Grid.Column="0" Source="../Rousources/Icons/Thermometer-25.png" Margin="23,57,197.333,50.667" Grid.RowSpan="3">
+            <Image.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image Grid.Column="1" Source="../Rousources/Icons/Thermometer-75.png" Margin="3.667,50,201.667,45.667" Grid.RowSpan="3">
+            <Image.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image Grid.Row="2"  Width="40" Height="40" Grid.Column="0" Source="../Rousources/Icons/air.png" Margin="40,11,217.333,9.667">
+            <Image.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image Grid.Row="2" Grid.Column="1" Source="../Rousources/Icons/humidity.png" Margin="39.667,24,228.667,11.667">
+            <Image.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image Grid.Row="3" Grid.Column="0" Source="../Rousources/Icons/anemometer.png" Margin="39.667,24,228.667,11.667">
+            <Image.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image Grid.Row="3" Grid.Column="1" Source="../Rousources/Icons/rosewinds.png" Margin="39.667,24,228.667,11.667">
+            <Image.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image Grid.Row="4" Grid.Column="0" Source="../Rousources/Icons/eye.png" Margin="39.667,24,228.667,11.667">
+            <Image.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image Grid.Row="4" Grid.Column="1" Source="../Rousources/Icons/precipitation.png" Margin="39.667,24,228.667,11.667">
+            <Image.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image Grid.Row="5" Grid.Column="0" Source="../Rousources/Icons/winter.png" Margin="39.667,24,228.667,11.667">
+            <Image.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image Grid.Row="5" Grid.Column="1" Source="../Rousources/Icons/snowflake.png" Margin="39.667,20.667,228.667,15" RenderTransformOrigin="0.431,0.3">
+            <Image.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button Name="BTm" Grid.ColumnSpan="2"  Style="{StaticResource AccentedSquareButtonStyle}" Content="Prévoir" HorizontalAlignment="Left" Height="40" Margin="231,10,0,0" Grid.Row="6" VerticalAlignment="Top" Width="135" Click="Button_Click"  />
+
+
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,210 @@
+﻿<UserControl x:Class="ProjetWPF.Fenetres.Parametre"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjetWPF.Fenetres"
+             xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls" 
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="900">
+    <UserControl.Resources>
+        <!--Style TargetType="WrapPanel">
+            <Setter Property="WrapPanel.Background" Value="{DynamicResource WhiteBrush}"/>
+            <Style.Triggers>
+                <Trigger Property="WrapPanel.IsMouseOver" Value="True">
+                    <Setter Property="WrapPanel.Background"  Value="{DynamicResource AccentColorBrush2}"/>
+                </Trigger>
+               
+                
+            </Style.Triggers>
+        </-->
+       
+    </UserControl.Resources>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+        <Grid Style="{StaticResource BackGroundGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="57*"/>
+                <RowDefinition Height="436*" MinHeight="500"/>
+                <RowDefinition Height="57*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="45*"/>
+                <ColumnDefinition Width="525*" MinWidth="400"/>
+                <ColumnDefinition Width="69*"/>
+                <ColumnDefinition Width="215*" MinWidth="210"/>
+                <ColumnDefinition Width="45*"/>
+            </Grid.ColumnDefinitions>
+            <Grid  Style="{StaticResource SimpleGrid}" Grid.ColumnSpan="2" Margin="45,20,7.667,0.333" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.Effect>
+                    <DropShadowEffect Direction="271" BlurRadius="20" ShadowDepth="4" Opacity="0.61"/>
+                </Grid.Effect>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="29*"/>
+                    <RowDefinition Height="72*"/>
+                    <RowDefinition Height="117*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Paramètres" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource LabelStyle}" FontWeight="Bold"  FontSize="36" />
+                <StackPanel Grid.Row="1" >
+                    <Label Content="Personalisation" FontSize="26" Margin="10,0,0,15"/>
+
+                    <WrapPanel Style="{DynamicResource WrapBleu}"  x:Name="ThemeW" MouseLeftButtonUp="WrapPanel_MouseLeftButtonUp" >
+                        <Image Source="../Rousources/Icons/theme.png" Margin="30,1,1,1" Height="20" Width="20">
+                            <Image.OpacityMask>
+                                <SolidColorBrush Color="Black" Opacity="0.7"/>
+                            </Image.OpacityMask>
+                        </Image>
+                        <Label Content="Thème" FontSize="22" FontFamily="Calibri Light"/>
+                    </WrapPanel>
+                    <WrapPanel Style="{DynamicResource WrapSelection}"  x:Name="DateEtHaureW" MouseLeftButtonUp="WrapPanel_MouseLeftButtonUp">
+                        <Image Source="../Rousources/Icons/Date.png" Margin="30,1,1,1" Height="20" Width="20">
+                            <Image.OpacityMask>
+                                <SolidColorBrush Color="Black" Opacity="0.7"/>
+                            </Image.OpacityMask>
+                        </Image>
+                        <Label Content="Date et heure" FontSize="22" FontFamily="Calibri Light"/>
+                    </WrapPanel>
+
+                </StackPanel>
+                <StackPanel Grid.Row="2">
+                    <Label Content="Administration" FontSize="26" Margin="10,0,0,15"/>
+                    <WrapPanel  Style="{DynamicResource WrapSelection}" x:Name="SauvgardeW"  MouseLeftButtonUp="WrapPanel_MouseLeftButtonUp">
+                        <Image Source="../Rousources/Icons/Sauvegarde.png" Margin="30,1,1,1" Height="20" Width="20">
+                            <Image.OpacityMask>
+                                <SolidColorBrush Color="Black" Opacity="0.7"/>
+                            </Image.OpacityMask>
+                        </Image>
+                        <Label Content="Sauvegarde" FontSize="22" FontFamily="Calibri Light"/>
+                    </WrapPanel>
+                    <WrapPanel  Style="{DynamicResource WrapSelection}" x:Name="RestaurationW"  MouseLeftButtonUp="WrapPanel_MouseLeftButtonUp">
+                        <Image Source="../Rousources/Icons/Restauration.png" Margin="30,1,1,1" Height="20" Width="20">
+                            <Image.OpacityMask>
+                                <SolidColorBrush Color="Black" Opacity="0.7"/>
+                            </Image.OpacityMask>
+                        </Image>
+                        <Label Content="Restauration" FontSize="22" FontFamily="Calibri Light"/>
+                    </WrapPanel>
+                    <WrapPanel  Style="{DynamicResource WrapSelection}" x:Name="ModificationW" MouseLeftButtonUp="WrapPanel_MouseLeftButtonUp" >
+                        <Image Source="../Rousources/Icons/Modification.png" Margin="30,1,1,1" Height="20" Width="20">
+                            <Image.OpacityMask>
+                                <SolidColorBrush Color="Black" Opacity="0.7"/>
+                            </Image.OpacityMask>
+                        </Image>
+                        <Label Content="Modification" FontSize="22" FontFamily="Calibri Light"/>
+                    </WrapPanel>
+
+                </StackPanel>
+            </Grid>
+            <Grid  Style="{StaticResource SimpleGrid}" x:Name="Modification" Grid.Column="3" Margin="0,20,0.333,0.333" Grid.Row="1" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="65*"/>
+                    <RowDefinition Height="53*"/>
+                    <RowDefinition Height="235*"/>
+                    <RowDefinition Height="83*"/>
+                </Grid.RowDefinitions>
+                <Grid.Effect>
+                    <DropShadowEffect Direction="271" BlurRadius="20" ShadowDepth="4" Opacity="0.61"/>
+                </Grid.Effect>
+                <Label Content="Modification" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource LabelStyle}" FontWeight="Bold" FontSize="32" Height="46" Margin="6,9,5.667,10.333" Width="203"/>
+                <ComboBox Name="NomWilaya"  Grid.Row="1"  Height="35" Margin="10,0.667,10.667,0" Width="194" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                <DatePicker x:Name="MyDate" Grid.Row="2" Height="35" VerticalAlignment="Top" Width="194" />
+                <Button Grid.Row="3" Style="{StaticResource AccentedSquareButtonStyle}" Content="Modifier"  Click="Button_Click"  Width="140" Height="40"  VerticalAlignment="Bottom" Margin="0,0,0,20">
+                    <Button.ToolTip>
+                        <ToolTip Content="Choisir une wilaya et une date &#10; puis cliquer pour entrer les nouvelles données de cette date"></ToolTip>
+                    </Button.ToolTip>
+                </Button>
+            </Grid>
+            <Grid Style="{StaticResource SimpleGrid}"  x:Name="Sauvgarde" Grid.Column="3" Margin="0,20,0.333,0.333" Grid.Row="1" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="59*"/>
+                    <RowDefinition Height="217*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="85*"/>
+                </Grid.RowDefinitions>
+                <Grid.Effect>
+                    <DropShadowEffect Direction="271" BlurRadius="20" ShadowDepth="4" Opacity="0.61"/>
+                </Grid.Effect>
+                <Label Content="Sauvegarde" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource LabelStyle}" FontWeight="Bold" FontSize="32" Height="52" Margin="15,2,15,5.333" Width="185" />
+                <DataGrid MinWidth="197.2" MinHeight="194" x:Name="MyDataGrid1" Grid.Row="1" Controls:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True" IsReadOnly="True" Margin="10,13.667,9,9.667" CanUserResizeColumns="False" CanUserSortColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn MinWidth="65"  Header="annee" Width="*" Binding="{Binding Annee}"/>
+                        <DataGridTextColumn MinWidth="65" Header="mois" Width="*" Binding="{Binding Mois}"/>
+                        <DataGridTextColumn MinWidth="67.2" Header="jour" Width="*" Binding="{Binding Jour}"/>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+                <Label Grid.Row="3" Content="Ajouter un point de Restauraion :" Margin="0,0.667,-1,0"/>
+                <Button Grid.Row="2" Style="{StaticResource AccentedSquareButtonStyle}" Content="Supprimer"  Height="40"  VerticalAlignment="Bottom" Margin="38,0,37,20" Click="Button_Click_3">
+                    <Button.ToolTip>
+                        <ToolTip Content="Supprimer un point de restauration. &#10; Vous devez d'abord selectionner une date."></ToolTip>
+                    </Button.ToolTip>
+                </Button>
+                <Button Grid.Row="3" Style="{StaticResource AccentedSquareButtonStyle}" Content="Ajouter" Click="Button_Click_1" Height="40"  VerticalAlignment="Bottom" Margin="38,0,37,20">
+                    <Button.ToolTip>
+                        <ToolTip Content="Ajouter un nouveau point de restauration."></ToolTip>
+                    </Button.ToolTip>
+                </Button>
+            </Grid>
+            <Grid Style="{StaticResource SimpleGrid}" x:Name="Restauration" Grid.Column="3" Margin="0,20,0.333,0.333" Grid.Row="1" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="46*"/>
+                    <RowDefinition Height="305*"/>
+                    <RowDefinition Height="85*"/>
+                </Grid.RowDefinitions>
+                <Grid.Effect>
+                    <DropShadowEffect Direction="271" BlurRadius="20" ShadowDepth="4" Opacity="0.61"/>
+                </Grid.Effect>
+                <Label Content="Restauration" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource LabelStyle}" FontWeight="Bold" FontSize="32" Height="46" Margin="7,0,6.667,0" Width="201"/>
+                <DataGrid x:Name="MyDataGrid" Grid.Row="1" Controls:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True" IsReadOnly="True" Margin="10,10,9.667,9.667" CanUserResizeColumns="False" CanUserSortColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn MinWidth="65" Header="année" Width="*" Binding="{Binding Annee}"/>
+                        <DataGridTextColumn MinWidth="65" Header="mois" Width="*" Binding="{Binding Mois}"/>
+                        <DataGridTextColumn MinWidth="67.2" Header="jour" Width="*" Binding="{Binding Jour}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Grid.Row="2" Style="{StaticResource AccentedSquareButtonStyle}" Content="Restaurer" Width="140" Height="40" Click="Button_Click_2" VerticalAlignment="Bottom" Margin="0,0,0,20">
+                    <Button.ToolTip>
+                        <ToolTip Content="Choisir un point de restauration &#10; puis cliquer pour appliquer. "></ToolTip>
+                    </Button.ToolTip>
+                </Button>
+            </Grid>
+            <Grid Style="{StaticResource SimpleGrid}"  x:Name="Theme" Grid.Column="3"  Margin="0,20,0.333,0.333" Grid.Row="1" Visibility="Visible">
+                <Grid.Effect>
+                    <DropShadowEffect Direction="271" BlurRadius="20" ShadowDepth="4" Opacity="0.61"/>
+                </Grid.Effect>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="86*"/>
+                    <RowDefinition Height="305*"/>
+                    <RowDefinition Height="86*"/>
+                </Grid.RowDefinitions>
+                <Label  Style="{StaticResource LabelStyle}" Content="Thème" HorizontalAlignment="Center" VerticalAlignment="Center"  FontWeight="Bold" FontSize="32" />
+
+                <ComboBox x:Name="ComboTheme" Grid.Row="1" Margin="0,0.333,0,254.333">
+                    <ComboBoxItem x:Name="Light" Content="Light"/>
+                    <ComboBoxItem Content="Dark"/>
+                </ComboBox>
+                <Button Name="chang" Style="{StaticResource AccentedSquareButtonStyle}" Content="Changer" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40"    Width="135" Grid.Row="2" Click="Chang_Click"   />
+            </Grid>
+            <Grid Style="{StaticResource SimpleGrid}" x:Name="DateEtHaure" Visibility="Hidden" Grid.Column="3" Margin="0,20,0.333,0.333" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="86*"/>
+                    <RowDefinition Height="305*"/>
+                    <RowDefinition Height="86*"/>
+                </Grid.RowDefinitions>
+                <Label Style="{StaticResource LabelStyle}" Content="Date" HorizontalAlignment="Center" VerticalAlignment="Center"  FontWeight="Bold" FontSize="32" Height="46"  Width="100"/>
+                <CheckBox x:Name="cb" Click="Cb_Click" Content="Utiliser la date du système. " Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,8.999,0,10"></CheckBox>
+                <TextBox x:Name="box" Grid.Row="1" Height="30" Width="120" Margin="46.643,41.998,50.223,234.706" IsEnabled="False"></TextBox>
+                <Label Content="Date : " Grid.Row="1" Height="30" Margin="10,41.998,-10,234.706"/>
+                <Controls:DateTimePicker SelectedDateChanged="Cal_SelectedDateChanged" SelectedTimeChanged="Cal_SelectedTimeChanged"  x:Name="cal" Orientation="Vertical" Culture="en-In" Grid.Row="1" Margin="25,151,25,114"/>
+                <Grid.Effect>
+                    <DropShadowEffect Direction="271" BlurRadius="20" ShadowDepth="4" Opacity="0.61"/>
+                </Grid.Effect>
+            </Grid>
+
+        </Grid>
+    </ScrollViewer>
+</UserControl>

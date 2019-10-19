@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{267AF3BD-AD91-466A-9AA9-DCA84AE2E739}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjetWPF</RootNamespace>
+    <AssemblyName>ProjetWPF</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net46\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks, Version=2.3.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.2.3.0\lib\net46\MahApps.Metro.IconPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Fenetres\Accueil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\Administration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\Courbe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\Diagramme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\Doublecourbe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\favoris.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\UserControls\AffichageJour.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\Aide.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\Apropos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\UserControls\boussole.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\UserControls\BtnChoix\BtnBlanc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\UserControls\BtnChoix\BtnBleu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\UserControls\CarteInteractive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\Parametre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\Prevision.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\UserControls\ControlStat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\UserControls\GridAjout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\UserControls\GridFavo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fenetres\UserControls\Pass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\UserControls\Recuperartion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\Statistiques.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fenetres\UserControls\Statistique.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Back\Class1.cs" />
+    <Compile Include="Back\Conversion.cs" />
+    <Compile Include="Back\DataWilaya.cs" />
+    <Compile Include="Back\DataWilayaPrediction.cs" />
+    <Compile Include="Back\DayData.cs" />
+    <Compile Include="Back\IOData.cs" />
+    <Compile Include="Back\Program.cs" />
+    <Compile Include="Back\Statistique.cs" />
+    <Compile Include="DatePickerCalendar.cs" />
+    <Compile Include="Fenetres\Accueil.xaml.cs">
+      <DependentUpon>Accueil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\Administration.xaml.cs">
+      <DependentUpon>Administration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\Courbe.xaml.cs">
+      <DependentUpon>Courbe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\Diagramme.xaml.cs">
+      <DependentUpon>Diagramme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\Doublecourbe.xaml.cs">
+      <DependentUpon>Doublecourbe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\favoris.xaml.cs">
+      <DependentUpon>favoris.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\UserControls\AffichageJour.xaml.cs">
+      <DependentUpon>AffichageJour.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\Aide.xaml.cs">
+      <DependentUpon>Aide.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\Apropos.xaml.cs">
+      <DependentUpon>Apropos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\UserControls\boussole.xaml.cs">
+      <DependentUpon>boussole.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\UserControls\BtnChoix\BtnBlanc.xaml.cs">
+      <DependentUpon>BtnBlanc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\UserControls\BtnChoix\BtnBleu.xaml.cs">
+      <DependentUpon>BtnBleu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\UserControls\CarteInteractive.xaml.cs">
+      <DependentUpon>CarteInteractive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\Parametre.xaml.cs">
+      <DependentUpon>Parametre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\Prevision.xaml.cs">
+      <DependentUpon>Prevision.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\UserControls\DatePicker.cs" />
+    <Compile Include="Fenetres\UserControls\ControlStat.xaml.cs">
+      <DependentUpon>ControlStat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\UserControls\GridAjout.xaml.cs">
+      <DependentUpon>GridAjout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\UserControls\GridFavo.xaml.cs">
+      <DependentUpon>GridFavo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\UserControls\MessageBoxAlert.cs" />
+    <Compile Include="Fenetres\UserControls\Pass.xaml.cs">
+      <DependentUpon>Pass.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\UserControls\Recuperartion.xaml.cs">
+      <DependentUpon>Recuperartion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\Statistiques.xaml.cs">
+      <DependentUpon>Statistiques.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fenetres\UserControls\Statistique.xaml.cs">
+      <DependentUpon>Statistique.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Theme\Accent1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Accent2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\DarkTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\LightTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DonneeCSV\1.csv" />
+    <None Include="DonneeCSV\10.csv" />
+    <None Include="DonneeCSV\11.csv" />
+    <None Include="DonneeCSV\12.csv" />
+    <None Include="DonneeCSV\13.csv" />
+    <None Include="DonneeCSV\14.csv" />
+    <None Include="DonneeCSV\15.csv" />
+    <None Include="DonneeCSV\16.csv" />
+    <None Include="DonneeCSV\17.csv" />
+    <None Include="DonneeCSV\18.csv" />
+    <None Include="DonneeCSV\19.csv" />
+    <None Include="DonneeCSV\2.csv" />
+    <None Include="DonneeCSV\20.csv" />
+    <None Include="DonneeCSV\21.csv" />
+    <None Include="DonneeCSV\22.csv" />
+    <None Include="DonneeCSV\23.csv" />
+    <None Include="DonneeCSV\24.csv" />
+    <None Include="DonneeCSV\25.csv" />
+    <None Include="DonneeCSV\26.csv" />
+    <None Include="DonneeCSV\27.csv" />
+    <None Include="DonneeCSV\28.csv" />
+    <None Include="DonneeCSV\29.csv" />
+    <None Include="DonneeCSV\3.csv" />
+    <None Include="DonneeCSV\30.csv" />
+    <None Include="DonneeCSV\31.csv" />
+    <None Include="DonneeCSV\32.csv" />
+    <None Include="DonneeCSV\33.csv" />
+    <None Include="DonneeCSV\34.csv" />
+    <None Include="DonneeCSV\35.csv" />
+    <None Include="DonneeCSV\36.csv" />
+    <None Include="DonneeCSV\37.csv" />
+    <None Include="DonneeCSV\38.csv" />
+    <None Include="DonneeCSV\39.csv" />
+    <None Include="DonneeCSV\4.csv" />
+    <None Include="DonneeCSV\40.csv" />
+    <None Include="DonneeCSV\41.csv" />
+    <None Include="DonneeCSV\42.csv" />
+    <None Include="DonneeCSV\43.csv" />
+    <None Include="DonneeCSV\44.csv" />
+    <None Include="DonneeCSV\45.csv" />
+    <None Include="DonneeCSV\46.csv" />
+    <None Include="DonneeCSV\47.csv" />
+    <None Include="DonneeCSV\48.csv" />
+    <None Include="DonneeCSV\5.csv" />
+    <None Include="DonneeCSV\6.csv" />
+    <None Include="DonneeCSV\7.csv" />
+    <None Include="DonneeCSV\8.csv" />
+    <None Include="DonneeCSV\9.csv" />
+    <None Include="DonneesUtilisateurs\User.bin" />
+    <None Include="Donnee\1.bin" />
+    <None Include="Donnee\10.bin" />
+    <None Include="Donnee\11.bin" />
+    <None Include="Donnee\12.bin" />
+    <None Include="Donnee\13.bin" />
+    <None Include="Donnee\14.bin" />
+    <None Include="Donnee\15.bin" />
+    <None Include="Donnee\16.bin" />
+    <None Include="Donnee\17.bin" />
+    <None Include="Donnee\18.bin" />
+    <None Include="Donnee\19.bin" />
+    <None Include="Donnee\2.bin" />
+    <None Include="Donnee\20.bin" />
+    <None Include="Donnee\21.bin" />
+    <None Include="Donnee\22.bin" />
+    <None Include="Donnee\23.bin" />
+    <None Include="Donnee\24.bin" />
+    <None Include="Donnee\25.bin" />
+    <None Include="Donnee\26.bin" />
+    <None Include="Donnee\27.bin" />
+    <None Include="Donnee\28.bin" />
+    <None Include="Donnee\29.bin" />
+    <None Include="Donnee\3.bin" />
+    <None Include="Donnee\30.bin" />
+    <None Include="Donnee\31.bin" />
+    <None Include="Donnee\32.bin" />
+    <None Include="Donnee\33.bin" />
+    <None Include="Donnee\34.bin" />
+    <None Include="Donnee\35.bin" />
+    <None Include="Donnee\36.bin" />
+    <None Include="Donnee\37.bin" />
+    <None Include="Donnee\38.bin" />
+    <None Include="Donnee\39.bin" />
+    <None Include="Donnee\4.bin" />
+    <None Include="Donnee\40.bin" />
+    <None Include="Donnee\41.bin" />
+    <None Include="Donnee\42.bin" />
+    <None Include="Donnee\43.bin" />
+    <None Include="Donnee\44.bin" />
+    <None Include="Donnee\45.bin" />
+    <None Include="Donnee\46.bin" />
+    <None Include="Donnee\47.bin" />
+    <None Include="Donnee\48.bin" />
+    <None Include="Donnee\5.bin" />
+    <None Include="Donnee\6.bin" />
+    <None Include="Donnee\7.bin" />
+    <None Include="Donnee\8.bin" />
+    <None Include="Donnee\9.bin" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DonneePre\" />
+    <Folder Include="Restauration\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Rousources\Back.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Rousources\Icons\air.png" />
+    <Resource Include="Rousources\Icons\anemometer.png" />
+    <Resource Include="Rousources\Icons\eye.png" />
+    <Resource Include="Rousources\Icons\humidity.png" />
+    <Resource Include="Rousources\Icons\precipitation.png" />
+    <Resource Include="Rousources\Icons\rosewinds.png" />
+    <Resource Include="Rousources\Icons\snowflake.png" />
+    <Resource Include="Rousources\Icons\winter.png" />
+    <Content Include="Rousources\Icons\air.svg" />
+    <Resource Include="Rousources\Icons\Thermometer-25.png" />
+    <Resource Include="Rousources\Icons\Thermometer-75.png" />
+    <Resource Include="Rousources\Icons\Date.png" />
+    <Resource Include="Rousources\Icons\Modification.png" />
+    <Resource Include="Rousources\Icons\Restauration.png" />
+    <Resource Include="Rousources\Icons\Sauvegarde.png" />
+    <Resource Include="Rousources\Icons\theme.png" />
+    <Content Include="Rousources\Logo1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
